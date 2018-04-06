@@ -1,0 +1,225 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <script type="text/javascript">
+            function validation()
+            {
+                //first name
+                var x=form1.fname.value;
+                alert(x);
+                var str=/(^[A-Za-z]{1,1})+([a-z]{1,19})$/;
+                if(x=='')
+                    {
+                        msg1.innerHTML='plz enter your name';
+                        return false;
+                    }
+                  else
+                  {
+                      msg1.innerHTML='';
+                  }
+                if(!x.match(str))
+                {
+                    msg1.innerHTML='name such as Kedar';
+                    return false;
+                }
+                else{
+                    msg1.innerHTML='';
+                }
+                //Lastname
+             var y=form1.lname.value;
+                alert(y);
+                var str=/(^[A-Za-z]{1,1})+([a-z]{1,19})$/;
+                if(y=='')
+                    {
+                        msg2.innerHTML='plz enter your lastname';
+                        return false;
+                    }
+                  else
+                  {
+                      msg2.innerHTML='';
+                  }
+                if(!y.match(str))
+                  {
+                    msg2.innerHTML='name such as Mude';
+                    return false;
+                  }
+                else
+                {
+                    msg2.innerHTML='';
+                }
+                //Gender
+                if((form1.gender[0].checked==false)&&(form1.gender[1].checked==false))
+                {
+                    msg3.innerHTML='plz select your gender';
+                    return false;
+                }
+                else
+                {
+                    msg3.innerHTML='';
+                }
+                alert(gender);
+               
+                //mobile number
+                if(num.value=='')
+                    {
+                        window.alert("Number cannot be null");
+                        num.focus();
+                        return false;
+                    }
+                if(num.length!=10)
+                    {
+                        window.alert("Number should not be more than 10 dogits");
+                        num.focus();
+                        return false;
+                    }
+               
+                //email
+                var mail = document.getElementById("email").value;
+                var str1 = /(^[a-z]{1,1})+([a-z0-9_.]{0,20})+([a-z0-9]{1,1})+([a-z0-9]{1,25})+([.]{1,1})+([a-z]{1,2})+([.]{0,1})+([a-z]{1,2})$/;
+                if(!mail.match(str1))
+                    {
+                        alert.innerHTML='enter email properly';
+                        return false;
+                    }
+    
+            }
+            
+        </script>
+    </head>
+    
+    <body bgcolor="azure">
+        <fieldset>
+                  <legend size= 20%><b><i><font size="5" color ="BLACK">Registration</font></i></b>
+                 </legend>
+       <b><form action='#' method="post" form name='form1' onsubmit='return validation();'> 
+           <table align="center">
+           
+           
+               <caption font  color="black" size="10">
+                 <h1>  Fill in your Personal Details</h1>
+             </caption>
+               
+           <br> 
+                
+                
+                <tr>
+                <td><br><br>First Name:</td>
+                <td><br><br><input type="text" name="fname" id="fname" placeholder="enter the first name."></td>
+                 <td> <i id='msg1'></i></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="lname" id="lname" placeholder="enter the last name."></td>
+                <td> <i id='msg2'></i></td>
+            </tr>
+            
+                <tr>
+                <td>MobileNumber:</td>
+                <td><input type="text" name="number" id="num" min="0" max="10"></td>
+            </tr>
+                 
+               <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" id="email"placeholder="eg abc@gmail.com"></td>
+            </tr>
+                
+              <tr>
+                <td>Select Gender:</td>
+                <td><input type ="radio" name="gender" value="male" >Male
+                <input type ="radio" name="gender" value="Female" >Female</td>
+                 <td> <i id='msg3'></i></td>
+             </tr>
+               
+               <tr>
+                <td>Age:</td>
+                <td><input type="number" name="age" min="18" max="42"></td>
+              </tr>
+               
+               <tr>
+                <td>Birthdate:</td>
+                <td><select name="Birthday">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                            </select>
+                            <select name="month">
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>September</option>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                            </select>
+                            <select name="year">
+                                <option>1985</option>
+                                <option>1986</option>
+                                <option>1987</option>
+                                <option>1988</option>
+                                <option>1989</option>
+                                <option>1990</option>
+                                <option>1991</option>
+                                <option>1992</option>
+                                <option>1993</option>
+                                <option>1994</option>
+                                <option>1995</option>
+                                <option>1996</option>
+                                <option>1997</option>
+                                <option>1998</option>
+                                <option>1999</option>
+                                <option>2000</option>
+                                <option>2001</option>
+                                <option>2002</option>
+                                <option>2003</option>
+                                <option>2004</option>
+                                <option>2005</option>
+                            </select>
+                        </td>
+            </tr>
+             
+            <tr>
+                <td><input type="submit" value="Submit" onclick="http://127.0.0.1:49631/Table.html"></td>     
+            </tr>
+        </table>
+        </form>
+   </b>
+           
+            
+        
+            
+      </fieldset>
+    </body>
+</html>
